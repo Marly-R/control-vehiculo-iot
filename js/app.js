@@ -5,7 +5,7 @@ function sendCommand(command) {
         status: command
     };
 
-    fetch('http://44.204.253.97/api/devices', {
+    fetch('http://44.204.201.47/api/devices', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
