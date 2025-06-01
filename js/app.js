@@ -84,17 +84,17 @@ function reproducirMovimientos() {
 // Modo demo: elegir movimiento aleatorio
 function demoMovimiento() {
     const comandos = [
-        "VUELTA IZQUIERDA",
-        "AVANZAR",
-        "VUELTA DERECHA",
-        "GIRO 360° IZQUIERDA",
-        "RETROCEDER",
-        "GIRO 360° DERECHA",
-        "GIRO 90° DERECHA",
-        "GIRO 90° IZQUIERDA",
-        "VUELTA ADELANTE IZQUIERDA",
-        "VUELTA ATRÁS IZQUIERDA",
-        "VUELTA ATRÁS DERECHA"
+    "VUELTA ADELANTE IZQUIERDA",
+    "GIRO 360° IZQUIERDA",
+    "GIRO 90° IZQUIERDA",
+    "VUELTA ATRÁS IZQUIERDA",
+    "AVANZAR",
+    "RETROCEDER",
+    "DETENER",
+    "VUELTA ADELANTE DERECHA",
+    "GIRO 360° DERECHA",
+    "GIRO 90° DERECHA",
+    "VUELTA ATRÁS DERECHA"
     ];
 
     const comandoAleatorio = comandos[Math.floor(Math.random() * comandos.length)];
