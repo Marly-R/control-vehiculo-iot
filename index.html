@@ -13,26 +13,41 @@
     <h1 class="mb-4 text-primary fw-bold">Control de Vehículo IoT</h1>
 
     <div class="row">
-    <div class="col-md-4 d-grid gap-3">
-        <button class="control-btn btn-turn-left" onclick="sendCommand('VUELTA ADELANTE IZQUIERDA')">VUELTA ADELANTE IZQUIERDA</button>
-        <button class="control-btn btn-spin-left" onclick="sendCommand('GIRO 360° IZQUIERDA')">GIRO 360° IZQUIERDA</button>
-        <button class="control-btn btn-turn-right-small" onclick="sendCommand('GIRO 90° IZQUIERDA')">GIRO 90° IZQUIERDA</button>
-        <button class="control-btn btn-turn-back-left" onclick="sendCommand('VUELTA ATRÁS IZQUIERDA')">VUELTA ATRÁS IZQUIERDA</button>
+        <div class="col-md-4 d-grid gap-3">
+            <button class="control-btn btn-turn-left" onclick="sendCommand('VUELTA ADELANTE IZQUIERDA')">VUELTA ADELANTE IZQUIERDA</button>
+            <button class="control-btn btn-spin-left" onclick="sendCommand('GIRO 360° IZQUIERDA')">GIRO 360° IZQUIERDA</button>
+            <button class="control-btn btn-turn-right-small" onclick="sendCommand('GIRO 90° IZQUIERDA')">GIRO 90° IZQUIERDA</button>
+            <button class="control-btn btn-turn-back-left" onclick="sendCommand('VUELTA ATRÁS IZQUIERDA')">VUELTA ATRÁS IZQUIERDA</button>
+        </div>
+        <div class="col-md-4 d-grid gap-3">
+            <button class="control-btn btn-forward" onclick="sendCommand('AVANZAR')">AVANZAR</button>
+            <button class="control-btn btn-turn-left-small" onclick="sendCommand('RETROCEDER')">RETROCEDER</button>
+            <button class="control-btn btn-stop" onclick="sendCommand('DETENER')">DETENER</button>
+        </div>
+        <div class="col-md-4 d-grid gap-3">
+            <button class="control-btn btn-turn-right" onclick="sendCommand('VUELTA ADELANTE DERECHA')">VUELTA ADELANTE DERECHA</button>
+            <button class="control-btn btn-spin-right" onclick="sendCommand('GIRO 360° DERECHA')">GIRO 360° DERECHA</button>
+            <button class="control-btn btn-backward" onclick="sendCommand('GIRO 90° DERECHA')">GIRO 90° DERECHA</button>
+            <button class="control-btn btn-turn-back-right" onclick="sendCommand('VUELTA ATRÁS DERECHA')">VUELTA ATRÁS DERECHA</button>
+        </div>
     </div>
-    <div class="col-md-4 d-grid gap-3">
-        <button class="control-btn btn-forward" onclick="sendCommand('AVANZAR')">AVANZAR</button>
-        <button class="control-btn btn-turn-left-small" onclick="sendCommand('RETROCEDER')">RETROCEDER</button>
-        <button class="control-btn btn-stop" onclick="sendCommand('DETENER')">DETENER</button>
-    </div>
-    <div class="col-md-4 d-grid gap-3">
-        <button class="control-btn btn-turn-right" onclick="sendCommand('VUELTA ADELANTE DERECHA')">VUELTA ADELANTE DERECHA</button>
-        <button class="control-btn btn-spin-right" onclick="sendCommand('GIRO 360° DERECHA')">GIRO 360° DERECHA</button>
-        <button class="control-btn btn-backward" onclick="sendCommand('GIRO 90° DERECHA')">GIRO 90° DERECHA</button>
-        <button class="control-btn btn-turn-back-right" onclick="sendCommand('VUELTA ATRÁS DERECHA')">VUELTA ATRÁS DERECHA</button>
-    </div>
-</div>
 
+    <!-- NUEVOS BOTONES: programación y demo -->
+    <div class="d-flex flex-wrap justify-content-center gap-3 my-5">
+        <button class="btn btn-outline-success" onclick="iniciarProgramacion()">Iniciar Programación</button>
+        <button class="btn btn-outline-danger" onclick="detenerProgramacion()">Detener Programación</button>
+        <button class="btn btn-outline-primary" onclick="reproducirMovimientos()">Reproducir Movimientos</button>
+        <button class="btn btn-outline-info" onclick="demoMovimiento()">Demo</button>
+    </div>
 
+    <!-- NUEVOS BOTONES: velocidad -->
+    <div class="d-flex flex-wrap justify-content-center gap-3 mb-4">
+        <button class="btn btn-warning" onclick="setVelocidad('bajo')">Velocidad Baja</button>
+        <button class="btn btn-warning" onclick="setVelocidad('medio')">Velocidad Media</button>
+        <button class="btn btn-warning" onclick="setVelocidad('alto')">Velocidad Alta</button>
+    </div>
+
+    <!-- Estado de movimiento -->
     <h4 class="mt-5 text-secondary">Movimiento</h4>
     <h2 id="movementStatus" class="text-primary mt-2">ESPERANDO ORDEN...</h2>
 </div>
