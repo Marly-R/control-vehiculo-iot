@@ -22,7 +22,7 @@ function sendCommand(command) {
         });
     }
 
-    fetch('http://44.201.22.175/api/devices', {
+    fetch('http://54.236.243.52/api/devices', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
