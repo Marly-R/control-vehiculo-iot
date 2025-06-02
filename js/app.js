@@ -46,7 +46,7 @@ function sendCommand(command) {
       status: command
     };
 
-    fetch('http://54.236.243.52/api/devices', {
+    fetch('http://98.84.55.133/api/devices', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify(data)
@@ -108,7 +108,7 @@ async function enviarMovimientosProgramados() {
     };
 
     try {
-      const res = await fetch('http://54.236.243.52/api/devices', {
+      const res = await fetch('http://98.84.55.133/api/devices', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(data)
